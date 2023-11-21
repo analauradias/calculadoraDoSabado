@@ -43,25 +43,3 @@ function somar(a, b) {
     resultado.innerHTML = soma;
 }
 
-let selectedLanguage = document.querySelector("#idioma");
-selectedLanguage.addEventListener("change", function () {
-    if (this.value == "pt-br") {
-        btSoma.value = "Soma";
-        btSub.value = "Subtração";
-        btMulti.value = "Multiplicação";
-        btDiv.value = "Divisão";
-        calculadora.textContent = "Calculadora";
-    } else if (this.value == "en") {
-        btSoma.value = "Sum";
-        btSub.value = "subtraction";
-        btMulti.value = "multiplication";
-        btDiv.value = "division";
-        calculadora.textContent = "Calculator";
-    } else if (this.value == "es") {
-        btSoma.value = "Suma";
-        btSub.value = "sustracción";
-        btMulti.value = "multiplicación";
-        btDiv.value = "división";
-        calculadora.textContent = "Calculadora";
-    }
-})
