@@ -1,13 +1,13 @@
 let linguaPortuguesa = document.createElement("script");
-linguaPortuguesa.scr = "./idiomas/portugues.js";
+linguaPortuguesa.src = "idiomas/portugues.js";
 document.head.appendChild(linguaPortuguesa);
 
 let linguaEspanhola = document.createElement("script");
-linguaEspanhola.scr = "./idiomas/espanhol.js";
+linguaEspanhola.src = "idiomas/espanhol.js";
 document.head.appendChild(linguaEspanhola);
 
 let linguaInglesa = document.createElement("script");
-linguaInglesa.scr = "./idiomas/english.js";
+linguaInglesa.src = "idiomas/english.js";
 document.head.appendChild(linguaInglesa);
 
 let selectIdioma = document.querySelector("#idioma");
@@ -17,10 +17,14 @@ selectIdioma.addEventListener("change", function(){
 
 function translate(idioma) {
     let traducao = 
-    (idioma = pt-br)? portugues()
-    : (idioma = es)? espanhol()
-    : (idioma = en)? english()
+    (idioma == "pt-br")? portugues()
+    : (idioma == "es")? espanhol()
+    : (idioma == "en")? english()
     : null;
+    setLanguage(traducao)
+}
+
+function setLanguage(traducao){
     let btSoma = document.querySelector("#btSoma");
     btSoma.value = traducao.soma;
     let btSub = document.querySelector("#btSub");
